@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-04-2013 a las 03:12:15
+-- Tiempo de generación: 03-04-2013 a las 04:46:56
 -- Versión del servidor: 5.5.27
 -- Versión de PHP: 5.4.7
 
@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `alumnos`
 --
 
+DROP TABLE IF EXISTS `alumnos`;
 CREATE TABLE IF NOT EXISTS `alumnos` (
   `id_alumno` int(11) NOT NULL AUTO_INCREMENT,
   `apellidos_alumno` varchar(150) COLLATE latin1_spanish_ci NOT NULL,
@@ -703,6 +704,7 @@ INSERT INTO `alumnos` (`id_alumno`, `apellidos_alumno`, `nombres_alumno`, `estad
 -- Estructura de tabla para la tabla `anos_lectivos`
 --
 
+DROP TABLE IF EXISTS `anos_lectivos`;
 CREATE TABLE IF NOT EXISTS `anos_lectivos` (
   `id_ano_lectivo` int(11) NOT NULL AUTO_INCREMENT,
   `detalle_ano_lectivo` varchar(150) DEFAULT NULL,
@@ -723,6 +725,7 @@ INSERT INTO `anos_lectivos` (`id_ano_lectivo`, `detalle_ano_lectivo`, `estado_an
 -- Estructura de tabla para la tabla `aportes`
 --
 
+DROP TABLE IF EXISTS `aportes`;
 CREATE TABLE IF NOT EXISTS `aportes` (
   `id_aporte` int(11) NOT NULL AUTO_INCREMENT,
   `detalle_aporte` varchar(150) COLLATE latin1_spanish_ci NOT NULL,
@@ -768,6 +771,7 @@ INSERT INTO `aportes` (`id_aporte`, `detalle_aporte`, `nombre_corto_aporte`, `nu
 -- Estructura de tabla para la tabla `calificaciones`
 --
 
+DROP TABLE IF EXISTS `calificaciones`;
 CREATE TABLE IF NOT EXISTS `calificaciones` (
   `id_calificacion` int(11) NOT NULL AUTO_INCREMENT,
   `calificaciones_info_id_calificacion_info` int(11) NOT NULL,
@@ -5550,6 +5554,7 @@ INSERT INTO `calificaciones` (`id_calificacion`, `calificaciones_info_id_calific
 -- Estructura de tabla para la tabla `calificaciones_estados`
 --
 
+DROP TABLE IF EXISTS `calificaciones_estados`;
 CREATE TABLE IF NOT EXISTS `calificaciones_estados` (
   `id_calificaciones_estado` int(11) NOT NULL AUTO_INCREMENT,
   `letra_calificaciones_estado` varchar(1) COLLATE latin1_spanish_ci NOT NULL,
@@ -5576,6 +5581,7 @@ INSERT INTO `calificaciones_estados` (`id_calificaciones_estado`, `letra_calific
 -- Estructura de tabla para la tabla `calificaciones_info`
 --
 
+DROP TABLE IF EXISTS `calificaciones_info`;
 CREATE TABLE IF NOT EXISTS `calificaciones_info` (
   `id_calificacion_info` int(11) NOT NULL AUTO_INCREMENT,
   `registro_anual_id_registro_anual` int(11) NOT NULL,
@@ -5801,6 +5807,7 @@ INSERT INTO `calificaciones_info` (`id_calificacion_info`, `registro_anual_id_re
 -- Estructura de tabla para la tabla `cursos`
 --
 
+DROP TABLE IF EXISTS `cursos`;
 CREATE TABLE IF NOT EXISTS `cursos` (
   `id_curso` int(11) NOT NULL AUTO_INCREMENT,
   `oferta_academica_id_oferta_academica` int(11) NOT NULL,
@@ -5852,6 +5859,7 @@ INSERT INTO `cursos` (`id_curso`, `oferta_academica_id_oferta_academica`, `anos_
 -- Estructura de tabla para la tabla `malla_curricular`
 --
 
+DROP TABLE IF EXISTS `malla_curricular`;
 CREATE TABLE IF NOT EXISTS `malla_curricular` (
   `id_malla_curricular` int(11) NOT NULL AUTO_INCREMENT,
   `cursos_id_curso` int(11) NOT NULL,
@@ -5908,6 +5916,7 @@ INSERT INTO `malla_curricular` (`id_malla_curricular`, `cursos_id_curso`, `mater
 -- Estructura de tabla para la tabla `materias`
 --
 
+DROP TABLE IF EXISTS `materias`;
 CREATE TABLE IF NOT EXISTS `materias` (
   `id_materia` int(11) NOT NULL AUTO_INCREMENT,
   `detalle_materia` varchar(150) COLLATE latin1_spanish_ci NOT NULL,
@@ -5931,6 +5940,7 @@ INSERT INTO `materias` (`id_materia`, `detalle_materia`, `estado_materia`) VALUE
 -- Estructura de tabla para la tabla `matriculas`
 --
 
+DROP TABLE IF EXISTS `matriculas`;
 CREATE TABLE IF NOT EXISTS `matriculas` (
   `id_matricula` int(11) NOT NULL AUTO_INCREMENT,
   `cursos_id_curso_matricula` int(11) NOT NULL,
@@ -6608,6 +6618,7 @@ INSERT INTO `matriculas` (`id_matricula`, `cursos_id_curso_matricula`, `alumnos_
 -- Estructura de tabla para la tabla `niveles_usuarios`
 --
 
+DROP TABLE IF EXISTS `niveles_usuarios`;
 CREATE TABLE IF NOT EXISTS `niveles_usuarios` (
   `id_nivel` int(11) NOT NULL AUTO_INCREMENT,
   `detalle_nivel` varchar(150) CHARACTER SET latin1 DEFAULT NULL,
@@ -6630,6 +6641,7 @@ INSERT INTO `niveles_usuarios` (`id_nivel`, `detalle_nivel`, `estado_nivel`) VAL
 -- Estructura de tabla para la tabla `oferta_academica`
 --
 
+DROP TABLE IF EXISTS `oferta_academica`;
 CREATE TABLE IF NOT EXISTS `oferta_academica` (
   `id_oferta_academica` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_corto_oferta_academica` varchar(45) NOT NULL,
@@ -6665,6 +6677,7 @@ INSERT INTO `oferta_academica` (`id_oferta_academica`, `nombre_corto_oferta_acad
 -- Estructura de tabla para la tabla `quimestres`
 --
 
+DROP TABLE IF EXISTS `quimestres`;
 CREATE TABLE IF NOT EXISTS `quimestres` (
   `id_quimestre` int(11) NOT NULL AUTO_INCREMENT,
   `detalle_quimestre` varchar(150) COLLATE latin1_spanish_ci NOT NULL,
@@ -6688,6 +6701,7 @@ INSERT INTO `quimestres` (`id_quimestre`, `detalle_quimestre`, `nombre_corto_qui
 -- Estructura de tabla para la tabla `registro_anual`
 --
 
+DROP TABLE IF EXISTS `registro_anual`;
 CREATE TABLE IF NOT EXISTS `registro_anual` (
   `id_registro_anual` int(11) NOT NULL AUTO_INCREMENT,
   `id_quimestre` int(11) NOT NULL,
@@ -6722,6 +6736,7 @@ INSERT INTO `registro_anual` (`id_registro_anual`, `id_quimestre`, `detalle_regi
 -- Estructura de tabla para la tabla `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_usuario` varchar(150) NOT NULL,
