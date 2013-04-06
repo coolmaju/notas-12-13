@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2013 a las 17:38:35
+-- Tiempo de generación: 06-04-2013 a las 20:47:30
 -- Versión del servidor: 5.5.27
 -- Versión de PHP: 5.4.7
 
@@ -779,7 +779,7 @@ CREATE TABLE IF NOT EXISTS `calificaciones` (
   `id_calificacion` int(11) NOT NULL AUTO_INCREMENT,
   `calificaciones_info_id_calificacion_info` int(11) NOT NULL,
   `alumnos_id_alumno` int(11) NOT NULL,
-  `valor_calificacion` float NOT NULL,
+  `valor_calificacion` float DEFAULT NULL,
   `usuarios_id_usuario` int(11) NOT NULL,
   `observacion_calificacion` varchar(150) COLLATE latin1_spanish_ci DEFAULT NULL,
   `calificaciones_estados_id_calificacion_estado` int(11) NOT NULL,
@@ -3458,7 +3458,7 @@ INSERT INTO `calificaciones` (`id_calificacion`, `calificaciones_info_id_calific
 (2793, 125, 131, 10, 2, '', 0),
 (2794, 125, 656, 5, 2, '', 0),
 (2795, 125, 132, 10, 2, '', 0),
-(2796, 125, 133, 7, 2, '', 0),
+(2796, 125, 133, 9, 2, '', 0),
 (2797, 125, 134, 8.5, 2, '', 0),
 (2798, 125, 135, 8, 2, '', 0),
 (2799, 125, 136, 5, 2, '', 0),
